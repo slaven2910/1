@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* IM NOT SURE IF I SHOULD LEAVE THIS SO BIG OR SHOULD I MAKE MORE CSS FILES, FOR EXAMPLE ONE FOR THE BUTTONS; ONE FOR THE FORM.. */
+
+
+body{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+.offset:before{
+    display: block;
+    content:"";
+    height: 6rem;
+}
+
+.navbar{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    background: rgba(0, 0, 0, 0.6)  !important;
+    padding: 20px 0;
+}
+
+.navbar-dark .navbar-nav .nav-link{
+    color:#fff;
+    padding-left: 20px;
+}
+
+
+.navbar-dark .navbar-nav .nav-link:hover{
+    color:#1ebba3
+}
+
+.heading-content{
+    position:absolute;
+    top: 50%;
+    width:100%;
+    max-width: 100%;
+}
+
+.heading-content h5{
+    font-size: 4em;
+    font-weight: 300;
+    color:#fff;
+}
+.heading-content h1{
+    font-size: 5em;
+    font-weight: bolder;
+    color:#fff;
+}
+.heading-content p{
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: lighter;
+    color:#ccc;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+
+/* ======================About Start================== */
+
+#about .btn{
+    border: 2px solid transparent;
+    width:40%;
+    padding: 15px 22px;
+    background: #000;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#about .btn a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#about .btn:hover{
+    border: 2px solid #1ebba3;
+    cursor:pointer;
+}
+
+/* ======================End Start================== */
+/* ======================Projects Start================== */
+
+#projects .button{
+    border: 2px solid transparent;
+    width:40%;
+    padding: 15px 22px;
+    background: #000;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#projects .button a{
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#projects .button:hover{
+    border: 2px solid #1ebba3;
+    cursor:pointer;
+}
+
+/* ======================Projects End================== */
+/* ======================Contact Start================== */
+#contact .button{
+    border: 2px solid transparent;
+    width:40%;
+    padding: 15px 22px;
+    background: #000;
+    border-radius: 5px;
+    margin-top: 10px;
+    letter-spacing: 3px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+
+#contact .button:hover{
+    border: 2px solid #1ebba3;
+    cursor:pointer;
+}
+/* ======================Contact End================== */
+
+/* ======================Media Query================== */
+
+/* HERE I TRIED TO FIX THE RESPONSIVENES  FROM THE HEADING BUT DIDNT WORK
+IM GONNA LEAVE IT HERE FOR NOW */
+
+@media screen and (max-width:767px){
+    /* -----tablets--------- */
+
+.navbar{
+    letter-spacing: 0.1em;
+    padding: 10px 0;
+}
+
+.heading-content h5{
+    font-size: 3em;
+}
+.heading-content h1{
+    font-size: 3em;
+}
+.heading-content p{
+    font-size: .9em;
+}
+
+}
+@media screen and (max-width:479px){
+    /* --------smart phone-------- */
+    .navbar{
+        letter-spacing: 0.1em;
+        padding: 7px 0;
+    }
+    .heading-content h5{
+        font-size: 2em;
+    }
+    .heading-content h1{
+        font-size: 2em;
+    }
+    .heading-content p{
+        font-size: .7em;
+    }
+}
+
+
+.form-group{
+    margin-bottom:1.5em;
+    transition:all .3s;
+}
+.form-label{
+    font-size:.75em;
+    color:#1ebba3;
+    display:block;
+    opacity:0;
+    transition: all .3s;
+    transform:translateX(-50px);
+}
+.form-control{
+    box-shadow:none;
+    border-radius:0;
+    border-color:#ccc;
+    border-style:none none solid none;
+    width:100%;
+    font-size:1.25em;
+    transition:all .6s;
+}
+.form-control::placeholder{
+    color:#aaa;
+}
+.form-control:focus{
+    box-shadow:none;
+    border-color:#1ebba3;
+    outline:none;
+}
+.form-group:focus-within{
+    transform:scale(1.1,1.1);
+}
+
+.form-control:invalid:focus{
+    border-color:red;
+}
+.form-control:valid:focus{
+    border-color:#1ebba3;
+}
+
+
+textarea{
+    resize:none;
+}
+
+
+
+.focused > .form-label{
+    opacity:1;
+    transform:translateX(0px);
+
+}
